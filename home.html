@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/password.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/home.css">
+    <title>Bem Social | Home</title>
+</head>
+<body>
+    <header>
+        <img src="/assets/logo.svg" alt="Logo Bem Social">
+    </header>
+
+    <main class="main">  
+         <!-- Formulário de postagem-->
+        <div class="newPost">
+           <div class="infoUser">
+             <div class="imgUser"></div>
+             <strong>Jonathan Alves</strong>
+            </div>
+           
+            <form action="" class="formPost" id="formPost">
+                <textarea name="textarea" placeholder="O que você está pensando agora?" id="textarea"></textarea>
+
+                <div class="iconsAndButton">
+                    <div class="icons">
+                        <button class="btnFileForm"><img src="/assets/img.svg" alt="Adicionar uma imagem"></button>
+                        <button class="btnFileForm"><img src="/assets/gif.svg" alt="Adicionar um gif"></button>
+                        <button class="btnFileForm"><img src="/assets/video.svg" alt="Adicionar um video"></button>
+                    </div>
+
+                    <button type="submit" class="btnSubmitForm">Publicar</button>
+                </div>
+            </form>
+        </div>
+
+        <ul class="posts" id="posts">
+            <li class="post">
+                <div class="infoUserPost">
+                    <div class="imgUserPost"></div>
+
+                    <div class="nameAndHour">
+                        <strong>Jonathan Alves</strong>
+                        <p>14h</p>
+                    </div>
+                </div>
+                <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
+                </p>
+
+                <div class="actionBtnPost">
+                    <button type="button" class="filesPost like"><img src="/assets/heart.svg" alt="Curtir">Curtir</button>
+                    <button type="button" class="filesPost comment"><img src="/assets/comment.svg" alt="Comentar">Comentar</button>
+                    <button type="button" class="filesPost share"><img src="/assets/share.svg" alt="Compartilhar">Compartilhar</button>
+                    <button type="button" class="filesPost delete"><img src="/assets/bx-message-square-x.svg" alt="Excluir">Excluir</button>              
+                </div>
+
+            </li>        
+        </ul>
+
+            
+    </main>
+
+     <script type="module" src="/Controllers/FormPost.js"></script>
+</body>
+</html>
