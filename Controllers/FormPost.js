@@ -1,3 +1,17 @@
+// COMO ENVIAR ATRAVÉS DO ENTER USANDO JAVASCRIPT
+document.addEventListener("keypress", function(e) {
+   
+    if(e.key === "Enter") {
+        event.preventDefault(); // Impede a quebra de linha automática
+     const btn = document.querySelector(".btnSubmitForm")
+     
+     btn.click();
+
+   }
+
+
+});
+
 export class FormPost {
     constructor(idForm, idTextarea, idUlPost) {
         this.form = document.getElementById(idForm);
@@ -6,9 +20,12 @@ export class FormPost {
         this.addSubmit();
 
     }
+    
     onSubmit(func) {
         this.form.addEventListener('submit', func)
     }
+
+    
 
     formValidate(value) {
         if(value === '' || value === null === undefined || value.length <1) {
@@ -60,12 +77,9 @@ export class FormPost {
 
         this.onSubmit(handleSubmit)
     }
-      
+        
 }
 
-function deleteComment(button) {
-    var commentDiv = button.comment; // Pega o elemento pai (div de comentário)
-    commentDiv.remove(); // Remove o elemento div de comentário
-  }
-  
+
 const postForm = new FormPost('formPost', 'textarea', 'posts')
+
